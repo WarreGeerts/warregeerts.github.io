@@ -78,39 +78,39 @@
     <div>
       <link href="./index.css" rel="stylesheet" />
 
-      <div class="home-container10">
-        <div data-role="Header" class="home-thq-navbar-container-elm">
-          <div class="home-thq-navbar-elm">
+      <div class="baseContainer">
+        <div data-role="Header" class="navbarContainer">
+          <div class="navbarElement">
             <span class="Card-Heading home-thq-heading-elm1">
               Portfolio - Geerts Warre
             </span>
-            <div class="home-thq-links-container-elm1">
-              <a href="#Introduction" class="home-thq-link-elm1 Navbar-Link">
+            <div class="linksContainer">
+              <a href="#Introduction" class="linkElement Navbar-Link">
                 Introduction
               </a>
-              <a href="#Projects" class="home-thq-link-elm2 Navbar-Link">
+              <a href="#Projects" class="linkElement Navbar-Link">
                 Projects
               </a>
-              <a href="#About" class="home-thq-link-elm3 Navbar-Link">About</a>
-              <a href="#Contact" class="home-thq-link-elm4 Navbar-Link">
+              <a href="#About" class="linkElement Navbar-Link">About</a>
+              <a href="#Contact" class="linkElement_2 Navbar-Link">
                 Contact
               </a>
             </div>
-            <div data-role="BurgerMenu" class="home-thq-burger-menu-elm">
-              <svg viewBox="0 0 1024 1024" class="home-icon1">
+            <div data-role="BurgerMenu" class="burgerMenuContainer">
+              <svg viewBox="0 0 1024 1024" class="icon1">
                 <path
                   d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
                 ></path>
               </svg>
             </div>
-            <div data-role="MobileMenu" class="home-thq-mobile-menu-elm">
-              <div class="home-container11">
+            <div data-role="MobileMenu" class="mobileMenuContainer">
+              <div class="mobileMenuElement">
                 <span class="Card-Heading home-thq-heading-elm2">Logo</span>
                 <div
                   data-role="CloseMobileMenu"
-                  class="home-thq-close-menu-elm"
+                  class="closeMobileMenuElement"
                 >
-                  <svg viewBox="0 0 1024 1024" class="home-icon3">
+                  <svg viewBox="0 0 1024 1024" class="icon3">
                     <path
                       d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
                     ></path>
@@ -128,7 +128,7 @@
         </div>
         <div class="home-thq-section-separator-elm1"></div>
         <div class="home-thq-section-separator-elm2"></div>
-        <div id="Introduction" class="home-container12">
+        <div id="Introduction" class="introductionContainer">
           <div class="home-thq-hero-elm">
             <div class="home-thq-hero-text-container-elm">
               <h1 class="home-thq-heading-elm3 Section-Heading">
@@ -140,7 +140,7 @@
                 development tools, and creating macros for games I play.
               </span>
             </div>
-            <img src="public/memyselfandi-1500w.jpg" class="home-image10" />
+            <img src="public/memyselfandi-1500w.jpg" class="imageMyself" />
           </div>
         </div>
         <div id="Projects" class="home-thq-projects-elm">
@@ -149,15 +149,15 @@
               <h1 class="Section-Heading home-text1">Projects</h1>
             </div>
             <div class="home-thq-projects-container-elm">
-              <div class="home-thq-game-container-elm1">
+              <div class="gameContainer">
                 <img
                   alt="image"
                   src="public/forgottencrypt-400w.png"
-                  class="home-image11"
+                  class="imageGameContainer"
                 />
-                <div class="home-container13">
-                  <h3 class="home-thq-title-elm1">The Forgotten Crypt</h3>
-                  <span class="home-thq-project-content-elm1">
+                <div class="gameElement">
+                  <h3 class="gameTitleContainer">The Forgotten Crypt</h3>
+                  <span class="gameDiscriptionContainer">
                     <span>
                       First group project with a friend: incrementally generated
                       random maps using a 2D array for each new level.
@@ -166,36 +166,36 @@
                     </span>
                     <br />
                   </span>
-                  <div class="home-container14">
-                    <div class="home-container15">
-                      <div class="home-thq-code-container-elm1">
-                        <span class="home-thq-language-elm1">C++</span>
+                  <div class="gameFooterContainer">
+                    <div class="programLanguageContainer">
+                      <div class="programLanguageElement">
+                        <span class="programLanguage">C++</span>
                       </div>
                     </div>
                     <a
                       href="https://warregeerts.itch.io/the-forgotten-crypt"
                       target="_blank"
                       rel="noreferrer noopener"
-                      class="home-link1"
+                      class="icon"
                     >
                       <img
                         alt="image"
                         src="public/link-200h.png"
-                        class="home-image12"
+                        class="imageLink"
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="home-thq-game-container-elm2">
+              <div class="gameContainer">
                 <img
                   alt="image"
                   src="public/lua_cpp_bindings_2048-400w.gif"
-                  class="home-image13"
+                  class="imageGameContainer"
                 />
-                <div class="home-container16">
-                  <h3 class="home-thq-title-elm2">LUA C++ Bindings</h3>
-                  <span class="home-thq-project-content-elm2">
+                <div class="gameElement">
+                  <h3 class="gameTitleContainer">LUA C++ Bindings</h3>
+                  <span class="gameDiscriptionContainer">
                     <span>
                       This project integrates Lua scripting with C++ using the sol2 library for efficient and easy binding. 
                       Lua handles all game logic, while C++ manages rendering and core engine operations. 
@@ -203,42 +203,42 @@
                     </span>
                     <br />
                   </span>
-                  <div class="home-container17">
-                    <div class="home-container18">
-                      <div class="home-thq-code-container-elm2">
-                        <span class="home-thq-language-elm2">C++</span>
+                  <div class="gameFooterContainer">
+                    <div class="programLanguageContainer">
+                      <div class="programLanguageElement">
+                        <span class="programLanguage">C++</span>
                       </div>
-                      <div class="home-thq-code-container-elm3">
-                        <span class="home-thq-language-elm3">LUA</span>
+                      <div class="programLanguageElement">
+                        <span class="programLanguage">LUA</span>
                       </div>
-                      <div class="home-thq-code-container-elm4">
-                        <span class="home-thq-language-elm4">SOL2</span>
+                      <div class="programLanguageElement">
+                        <span class="programLanguage">SOL2</span>
                       </div>
                     </div>
                     <a
                       href="https://github.com/WarreGeerts/SoftwareEnginering_LuaCppLink"
                       target="_blank"
                       rel="noreferrer noopener"
-                      class="home-link2"
+                      class="icon"
                     >
                       <img
                         alt="image"
                         src="public/link-200h.png"
-                        class="home-image14"
+                        class="imageLink"
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="home-thq-game-container-elm3">
+              <div class="gameContainer">
                 <img
                   alt="image"
                   src="public/AeroGolf.gif"
-                  class="home-image15"
+                  class="imageGameContainer_2"
                 />
-                <div class="home-container19">
-                  <h3 class="home-thq-title-elm3">Aero Golf</h3>
-                  <span class="home-thq-project-content-elm3">
+                <div class="gameElement">
+                  <h3 class="gameTitleContainer">Aero Golf</h3>
+                  <span class="gameDiscriptionContainer">
                     <span>
                       This was my first full Unity project, built for a school exam. 
                       I implemented click and drag movement, basic UI, and level management while learning Unity's workspace and C# scripting. 
@@ -246,25 +246,69 @@
                     </span>
                     <br />
                   </span>
-                  <div class="home-container20">
-                    <div class="home-container21">
-                      <div class="home-thq-code-container-elm5">
-                        <span class="home-thq-language-elm5">C#</span>
+                  <div class="gameFooterContainer">
+                    <div class="programLanguageContainer">
+                      <div class="programLanguageElement">
+                        <span class="programLanguage">C#</span>
                       </div>
-                      <div class="home-thq-code-container-elm6">
-                        <span class="home-thq-language-elm6">Unity</span>
+                      <div class="programLanguageElement">
+                        <span class="programLanguage">Unity</span>
                       </div>
                     </div>
                     <a
                       href="https://warregeerts.itch.io/aero-golf"
                       target="_blank"
                       rel="noreferrer noopener"
-                      class="home-link3"
+                      class="icon"
                     >
                       <img
                         alt="image"
                         src="public/link-200h.png"
-                        class="home-image16"
+                        class="imageLink"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="gameContainer">
+                <img
+                  alt="image"
+                  src="public/AuctionWar.gif"
+                  class="imageGameContainer"
+                />
+                <div class="gameElement">
+                  <h3 class="gameTitleContainer">Auction War</h3>
+                  <span class="gameDiscriptionContainer">
+                    <span>
+                      This was my first full Unreal project, built for a school exam. 
+                      I implemented a pretty complex system for bidding and the counter bids of the bots.
+                      With a fold code with multiple variables that decide if they continue or stop bidding on the items.
+                      This game also has an inventory system where the player can sell their items.
+                    </span>
+                    <br />
+                  </span>
+                  <div class="gameFooterContainer">
+                    <div class="programLanguageContainer">
+                      <div class="programLanguageElement">
+                        <span class="programLanguage">C++</span>
+                      </div>
+                      <div class="programLanguageElement">
+                        <span class="programLanguage">Unreal</span>
+                      </div>
+                      <div class="programLanguageElement">
+                        <span class="programLanguage">Blueprinting</span>
+                      </div>
+                    </div>
+                    <a
+                      href="https://warregeerts.itch.io/auction-war"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="icon"
+                    >
+                      <img
+                        alt="image"
+                        src="public/link-200h.png"
+                        class="imageLink"
                       />
                     </a>
                   </div>
@@ -278,7 +322,7 @@
             <div class="home-thq-heading-container-elm2">
               <h1 class="Section-Heading home-thq-heading-elm4">About</h1>
             </div>
-            <div class="home-container22">
+            <div class="aboutContainer">
               <span class="home-text8">
                 I'm a second-year DAE Game Development student at Howest,
                 passionate about game programming and building helpful tools. I
@@ -293,39 +337,39 @@
         </div>
         <div class="home-thq-section-separator-elm3"></div>
         <div id="Contact" class="home-thq-footer-container-elm">
-          <div class="home-container23">
+          <div class="footerContainer">
             <a
               href="mailto:Geertswarre@gmail.com?subject=Reason For Contact"
-              class="home-link4"
+              class="icon"
             >
               <img
                 alt="image"
                 src="public/mail-200h.png"
-                class="home-image17"
+                class="imageFooterIcon"
               />
             </a>
             <a
               href="https://www.linkedin.com/in/warre-geerts-93378038b/"
               target="_blank"
               rel="noreferrer noopener"
-              class="home-link5"
+              class="icon"
             >
               <img
                 alt="image"
                 src="public/linkedin-200h.png"
-                class="home-image18"
+                class="imageFooterIcon"
               />
             </a>
             <a
               href="https://github.com/WarreGeerts"
               target="_blank"
               rel="noreferrer noopener"
-              class="home-link6"
+              class="icon"
             >
               <img
                 alt="image"
                 src="public/github-200h.png"
-                class="home-image19"
+                class="imageFooterIcon_2"
               />
             </a>
           </div>
