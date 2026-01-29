@@ -473,16 +473,20 @@
   .home-thq-text-elm {
     text-align: center;
   }
+
+  .imageMyself{
+    width: 100%
+  }
 }
  
 @media(max-width: 767px) {
-  .home-thq-navbar-elm {
+  .navbarElement {
     position: relative;
   }
-  .home-thq-links-container-elm1 {
+  .linksContainer {
     display: none;
   }
-  .home-thq-burger-menu-elm {
+  .burgerMenuContainer {
     display: flex;
     padding: var(--dl-layout-space-halfunit);
     margin-left: var(--dl-layout-space-tripleunit);
@@ -507,7 +511,7 @@
 }
  
 @media(max-width: 479px) {
-  .home-thq-burger-menu-elm {
+  .burgerMenuContainer {
     margin-left: var(--dl-layout-space-doubleunit);
   }
   .home-thq-hero-text-container-elm {
