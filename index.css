@@ -99,18 +99,10 @@
   flex-direction: column;
 }
  
-.home-thq-link-elm5 {
+.mobileLinkElement {
   margin-bottom: var(--dl-layout-space-unit);
 }
- 
-.home-thq-link-elm6 {
-  margin-bottom: var(--dl-layout-space-unit);
-}
- 
-.home-thq-link-elm7 {
-  margin-bottom: var(--dl-layout-space-unit);
-}
- 
+
 .home-thq-section-separator-elm1 {
   width: 100%;
   height: 1px;
