@@ -1,524 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Portfolio Page</title>
-    <meta property="og:title" content="Portfolio Page" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warre Geerts - Game Programmer Portfolio</title>
+  <meta name="description" content="Portfolio of Warre Geerts, a game programmer and third-year Game Development student at Howest (DAE), working in C++, Unreal Engine and Unity. Looking for an internship from February to June 2027.">
+  <link rel="canonical" href="https://warregeerts.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#ffffff">
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Arial;
-        font-size: 16px;
-      }
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Warre Geerts - Game Programmer">
+  <meta property="og:description" content="C++, Unreal Engine and Unity projects by Warre Geerts. Looking for an internship from February to June 2027.">
+  <meta property="og:url" content="https://warregeerts.github.io/">
+  <meta property="og:image" content="https://warregeerts.github.io/assets/img/warre.jpg">
+  <meta name="twitter:card" content="summary">
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.55;
-        color: var(--dl-color-gray-black);
-        background: var(--dl-color-gray-white);
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Overpass:wght@700;900&display=swap">
+  <link rel="stylesheet" href="styles.css">
 
-        fill: var(--dl-color-gray-black);
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-  </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./index.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Warre Geerts",
+    "jobTitle": "Game Programmer",
+    "url": "https://warregeerts.github.io/",
+    "email": "mailto:geertswarre@gmail.com",
+    "sameAs": [
+      "https://github.com/WarreGeerts",
+      "https://www.linkedin.com/in/warre-geerts-93378038b/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      <div class="baseContainer">
-        <div data-role="Header" class="navbarContainer">
-          <div class="navbarElement">
-            <span class="Card-Heading home-thq-heading-elm1">
-              Portfolio - Geerts Warre
-            </span>
-            <div class="linksContainer">
-              <a href="#Introduction" class="linkElement Navbar-Link">Introduction</a>
-              <a href="#Projects" class="linkElement Navbar-Link">Projects</a>
-              <a href="#About" class="linkElement Navbar-Link">About</a>
-              <a href="#Contact" class="linkElement_2 Navbar-Link">Contact</a>
-            </div>
-            <div data-role="BurgerMenu" class="burgerMenuContainer">
-              <svg viewBox="0 0 1024 1024" class="icon1">
-                <path
-                  d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
-                ></path>
-              </svg>
-            </div>
-            <div data-role="MobileMenu" class="mobileMenuContainer">
-              <div class="mobileMenuElement">
-                <span class="Card-Heading home-thq-heading-elm2">Menu Portfolio - Geerts Warre</span>
-                <div
-                  data-role="CloseMobileMenu"
-                  class="closeMobileMenuElement"
-                >
-                  <svg viewBox="0 0 1024 1024" class="icon3">
-                    <path
-                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="home-thq-links-container-elm2">
-                <a href="#Introduction" class="mobileLinkElement Navbar-Link">Introduction</a>
-                <a href="#Projects" class="mobileLinkElement Navbar-Link">Projects</a>
-                <a href="#About" class="mobileLinkElement Navbar-Link">About</a>
-                <a href="#Contact" class="mobileLinkElement Navbar-Link">Contact</a>
+  <!-- Icon sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+    <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7M21 3l-9 9M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></symbol>
+  </svg>
 
-                <!-- <span class="mobileLinkElement Navbar-Link">About</span>
-                <span class="mobileLinkElement Navbar-Link">Experience</span>
-                <span class="mobileLinkElement Navbar-Link">Portofolio</span>
-                <span class="Navbar-Link">Contact</span> -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="home-thq-section-separator-elm1"></div>
-        <div class="home-thq-section-separator-elm2"></div>
-        <div id="Introduction" class="introductionContainer">
-          <div class="home-thq-hero-elm">
-            <div class="home-thq-hero-text-container-elm">
-              <h1 class="home-thq-heading-elm3 Section-Heading">
-                Introduction
-              </h1>
-              <span class="home-thq-text-elm">
-                Hello, I'm Warre Geerts, a Game Programmer &amp; DAE student
-                studying Game Development. I enjoy making games, building
-                development tools, and creating macros for games I play.
-              </span>
-            </div>
-            <img src="public/memyselfandi-1500w.jpg" class="imageMyself" />
-          </div>
-        </div>
-        <div id="Projects" class="home-thq-projects-elm">
-          <div class="home-thq-max-content-width-container-elm1">
-            <div class="home-thq-heading-container-elm1">
-              <h1 class="Section-Heading home-text1">Projects</h1>
-            </div>
-            <div class="home-thq-projects-container-elm">
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top">Warre Geerts</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-              <!--Forgotten Crypt-->
-
-              <div class="gameContainer">
-                <img
-                  alt="image"
-                  src="public/forgottencrypt-400w.png"
-                  class="imageGameContainer"
-                />
-                <div class="gameElement">
-                  <h3 class="gameTitleContainer">The Forgotten Crypt</h3>
-                  <span class="gameDiscriptionContainer">
-                    <span>
-                      First group project with a friend: incrementally generated
-                      random maps using a 2D array for each new level.
-                      Implemented raycast-based rendering directly from the 2D
-                      grid data to create a Doom-style first-person visual.
-                    </span>
-                    <br />
-                  </span>
-                  <div class="gameFooterContainer">
-                    <div class="programLanguageContainer">
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">C++</span>
-                      </div>
-                    </div>
-                    <a
-                      href="https://warregeerts.itch.io/the-forgotten-crypt"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      class="icon"
-                    >
-                      <img
-                        alt="image"
-                        src="public/link-200h.png"
-                        class="imageLink"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!--Lua game-->
-
-              <div class="gameContainer">
-                <img
-                  alt="image"
-                  src="public/lua_cpp_bindings_2048-400w.gif"
-                  class="imageGameContainer"
-                />
-                <div class="gameElement">
-                  <h3 class="gameTitleContainer">LUA C++ Bindings</h3>
-                  <span class="gameDiscriptionContainer">
-                    <span>
-                      This project integrates Lua scripting with C++ using the sol2 library for efficient and easy binding. 
-                      Lua handles all game logic, while C++ manages rendering and core engine operations. 
-                      I implemented the classic 2048 game entirely in Lua to demonstrate this architecture.
-                    </span>
-                    <br />
-                  </span>
-                  <div class="gameFooterContainer">
-                    <div class="programLanguageContainer">
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">C++</span>
-                      </div>
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">LUA</span>
-                      </div>
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">SOL2</span>
-                      </div>
-                    </div>
-                    <a
-                      href="https://github.com/WarreGeerts/SoftwareEnginering_LuaCppLink"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      class="icon"
-                    >
-                      <img
-                        alt="image"
-                        src="public/link-200h.png"
-                        class="imageLink"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!--Aero Golf-->
-
-              <div class="gameContainer">
-                <img
-                  alt="image"
-                  src="public/AeroGolf.gif"
-                  class="imageGameContainer_2"
-                />
-                <div class="gameElement">
-                  <h3 class="gameTitleContainer">Aero Golf</h3>
-                  <span class="gameDiscriptionContainer">
-                    <span>
-                      This was my first full Unity project, built for a school exam. 
-                      I implemented click and drag movement, basic UI, and level management while learning Unity's workspace and C# scripting. 
-                      Delivering a fully playable prototype demonstrating core engine proficiency.
-                    </span>
-                    <br />
-                  </span>
-                  <div class="gameFooterContainer">
-                    <div class="programLanguageContainer">
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">C#</span>
-                      </div>
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">Unity</span>
-                      </div>
-                    </div>
-                    <a
-                      href="https://warregeerts.itch.io/aero-golf"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      class="icon"
-                    >
-                      <img
-                        alt="image"
-                        src="public/link-200h.png"
-                        class="imageLink"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!--Game Projects-->
-
-              <div class="gameContainer">
-                <img
-                  alt="image"
-                  src="public/RiskyBusiness.gif"
-                  class="imageGameContainer_2"
-                />
-                <div class="gameElement">
-                  <h3 class="gameTitleContainer">Risky Business</h3>
-                  <span class="gameDiscriptionContainer">
-                    <span>
-                      Co-developed in a team of 6, this competitive party game challenges players to out-rate rival stores through chaotic sabotage. 
-                      Implemented interactive prop throwing, player pushing, dynamic NPC handling, and custom scoring systems.
-                    </span>
-                    <br />
-                  </span>
-                  <div class="gameFooterContainer">
-                    <div class="programLanguageContainer">
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">C#</span>
-                      </div>
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">Unity</span>
-                      </div>
-                    </div>
-                    <a
-                      href="https://araarathain.itch.io/gp01riskybusiness"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      class="icon"
-                    >
-                      <img
-                        alt="image"
-                        src="public/link-200h.png"
-                        class="imageLink"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!--Game Ai Research-->
-
-              <div class="gameContainer">
-                <img
-                  alt="image"
-                  src="public/WFC.gif"
-                  class="imageGameContainer_2"
-                />
-                <div class="gameElement">
-                  <h3 class="gameTitleContainer">Game AI Research</h3>
-                  <span class="gameDiscriptionContainer">
-                    <span>
-                      A technical research project analyzing the Wave Function Collapse algorithm. 
-                      Explains core propagation mechanics and benchmarks execution times across varying map sizes, 
-                      comparing performance impacts of additive features like weighted tiles and negative constraints.
-                      
-                    </span>
-                    <br />
-                  </span>
-                  <div class="gameFooterContainer">
-                    <div class="programLanguageContainer">
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">C#</span>
-                      </div>
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">Unity</span>
-                      </div>
-                    </div>
-                    <a
-                      href="https://github.com/DAE-GD-2025-2026/gameai-research-project-WarreGeerts"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      class="icon"
-                    >
-                      <img
-                        alt="image"
-                        src="public/link-200h.png"
-                        class="imageLink"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!--Game Ai Zombie-->
-
-              <div class="gameContainer">
-                <img
-                  alt="image"
-                  src="public/Zombie.gif"
-                  class="imageGameContainer_2"
-                />
-                <div class="gameElement">
-                  <h3 class="gameTitleContainer">Game AI Zombie Survival</h3>
-                  <span class="gameDiscriptionContainer">
-                    <span>
-                      A Game AI simulation focusing on pathfinding and decision-making systems. 
-                      Leveraged Unreal Engine's Blueprints and State Trees to create survivor AI that dynamically navigates environments, 
-                      evades tracking zombies, and manages item pickup priorities.
-                    </span>
-                    <br />
-                  </span>
-                  <div class="gameFooterContainer">
-                    <div class="programLanguageContainer">
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">C++</span>
-                      </div>
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">Unreal</span>
-                      </div>
-                    </div>
-                    <a
-                      href="https://github.com/DAE-GD-2025-2026/gameai-zombie-WarreGeerts"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      class="icon"
-                    >
-                      <img
-                        alt="image"
-                        src="public/link-200h.png"
-                        class="imageLink"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!--Game Projects-->
-
-              <div class="gameContainer">
-                <img
-                  alt="image"
-                  src="public/GameProjects.gif"
-                  class="imageGameContainer_2"
-                />
-                <div class="gameElement">
-                  <h3 class="gameTitleContainer">The Final Sigil</h3>
-                  <span class="gameDiscriptionContainer">
-                    <span>
-                      Co-developed in a team of 6, this top-down bullet-hell roguelike features a modular spell-crafting system and dynamic spell casting. 
-                      Descend into the ruins of an ancient jungle temple, fight through deadly enemy encounters, and collect mysterious sigils to build your arsenal.
-                      Currently in active prototype development.
-                    </span>
-                    <br />
-                  </span>
-                  <div class="gameFooterContainer">
-                    <div class="programLanguageContainer">
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">C++</span>
-                      </div>
-                      <div class="programLanguageElement">
-                        <span class="programLanguage">Unreal</span>
-                      </div>
-                    </div>
-                    <a
-                      href="https://butterdawgg.itch.io/the-final-sigil"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      class="icon"
-                    >
-                      <img
-                        alt="image"
-                        src="public/link-200h.png"
-                        class="imageLink"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-<!-- end of Projects tab-->
-
-            </div>
-          </div>
-        </div>
-        <div id="About" class="home-thq-about-elm">
-          <div class="home-thq-max-content-width-container-elm2">
-            <div class="home-thq-heading-container-elm2">
-              <h1 class="Section-Heading home-thq-heading-elm4">About</h1>
-            </div>
-            <div class="aboutContainer">
-              <span class="home-text8">
-                I'm a third-year DAE Game Development student at Howest,
-                passionate about game programming and building helpful tools. I
-                primarily work with C++, but I've also built projects using
-                Unreal Engine Blueprints, Unity C#, custom SDL/OpenGL engines,
-                Lua (SOL2), and AHK. My favorite recent project is my Game Ai Research, 
-                here I researched about Wave Function Collapse. 
-                It was very intresting to get to know how this algorithm generates based on restrictions.
-                
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="home-thq-section-separator-elm3"></div>
-        <div id="Contact" class="home-thq-footer-container-elm">
-          <div class="footerContainer">
-            <a
-              href="mailto:Geertswarre@gmail.com?subject=Reason For Contact"
-              class="icon"
-            >
-              <img
-                alt="image"
-                src="public/mail-200h.png"
-                class="imageFooterIcon"
-              />
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Game Programmer · Howest DAE</p>
+          <h1 id="hero-title">Warre Geerts</h1>
+          <p class="lead">
+            I'm a third-year Game Development student who works mainly in C++.
+            I enjoy making games, building development tools and creating macros for the games I play.
+          </p>
+          <p class="availability"> Looking for an internship · February – June 2027</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-secondary" href="files/CV_WarreGeerts.pdf" download>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV
             </a>
-            <a
-              href="https://www.linkedin.com/in/warre-geerts-93378038b/"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="icon"
-            >
-              <img
-                alt="image"
-                src="public/linkedin-200h.png"
-                class="imageFooterIcon"
-              />
-            </a>
-            <a
-              href="https://github.com/WarreGeerts"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="icon"
-            >
-              <img
-                alt="image"
-                src="public/github-200h.png"
-                class="imageFooterIcon_2"
-              />
-            </a>
+          </div>
+        </div>
+        <img class="portrait" src="assets/img/warre.jpg" width="900" height="900" alt="Portrait of Warre Geerts">
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="section-title">Projects</h2>
+
+        <div class="filters" role="group" aria-label="Filter projects by technology" hidden>
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="cpp" aria-pressed="false">C++</button>
+          <button type="button" class="filter" data-filter="csharp" aria-pressed="false">C#</button>
+          <button type="button" class="filter" data-filter="unreal" aria-pressed="false">Unreal</button>
+          <button type="button" class="filter" data-filter="unity" aria-pressed="false">Unity</button>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- The Final Sigil -->
+          <article class="card" data-tags="cpp unreal">
+            <div class="card-media">
+              <video muted loop playsinline preload="none" poster="assets/img/final-sigil.jpg" aria-label="Gameplay footage of The Final Sigil">
+                <source src="assets/video/final-sigil.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body">
+              <h3>The Final Sigil <span class="badge">In production</span></h3>
+              <p>
+                Co-developed in a team of 6, this top-down bullet-hell roguelike features a modular spell-crafting system and dynamic spell casting.
+                Descend into the ruins of an ancient jungle temple, fight through deadly enemy encounters and collect mysterious sigils to build your arsenal.
+              </p>
+              <p class="role"><strong>My role:</strong> Gameplay programming, spell crafting system</p>
+            </div>
+            <div class="card-footer">
+              <ul class="tags" aria-label="Technologies"><li>C++</li><li>Unreal</li></ul>
+              <a class="card-link" href="https://butterdawgg.itch.io/the-final-sigil" target="_blank" rel="noopener">View on itch.io <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Game AI Research -->
+          <article class="card" data-tags="csharp unity">
+            <div class="card-media">
+              <video muted loop playsinline preload="none" poster="assets/img/wfc-research.jpg" aria-label="Wave Function Collapse generating a map">
+                <source src="assets/video/wfc-research.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body">
+              <h3>Game AI Research: Wave Function Collapse</h3>
+              <p>
+                A technical research project analyzing the Wave Function Collapse algorithm.
+                It explains the core propagation mechanics and benchmarks execution times across varying map sizes,
+                comparing the performance impact of additive features such as weighted tiles and negative constraints.
+              </p>
+            </div>
+            <div class="card-footer">
+              <ul class="tags" aria-label="Technologies"><li>C#</li><li>Unity</li></ul>
+              <a class="card-link" href="https://github.com/DAE-GD-2025-2026/gameai-research-project-WarreGeerts" target="_blank" rel="noopener">View on GitHub <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Game AI Zombie Survival -->
+          <article class="card" data-tags="cpp unreal">
+            <div class="card-media">
+              <video muted loop playsinline preload="none" poster="assets/img/zombie-ai.jpg" aria-label="Survivor AI evading zombies in Unreal Engine">
+                <source src="assets/video/zombie-ai.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body">
+              <h3>Game AI Zombie Survival</h3>
+              <p>
+                A Game AI simulation focused on pathfinding and decision-making.
+                Using Unreal Engine's Blueprints and State Trees, I built survivor AI that navigates its environment dynamically,
+                evades tracking zombies and prioritizes which items to pick up.
+              </p>
+            </div>
+            <div class="card-footer">
+              <ul class="tags" aria-label="Technologies"><li>C++</li><li>Unreal</li></ul>
+              <a class="card-link" href="https://github.com/DAE-GD-2025-2026/gameai-zombie-WarreGeerts" target="_blank" rel="noopener">View on GitHub <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Lua + C++ bindings -->
+          <article class="card" data-tags="cpp">
+            <div class="card-media contain">
+              <video muted loop playsinline preload="none" poster="assets/img/lua-2048.jpg" aria-label="2048 running through the Lua and C++ bindings">
+                <source src="assets/video/lua-2048.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body">
+              <h3>Lua + C++ Bindings</h3>
+              <p>
+                This project integrates Lua scripting with C++ using the sol2 library for efficient and easy binding.
+                Lua handles all game logic, while C++ manages rendering and core engine operations.
+                I implemented the classic 2048 game entirely in Lua to demonstrate this architecture.
+              </p>
+            </div>
+            <div class="card-footer">
+              <ul class="tags" aria-label="Technologies"><li>C++</li><li>Lua</li><li>sol2</li></ul>
+              <a class="card-link" href="https://github.com/WarreGeerts/SoftwareEnginering_LuaCppLink" target="_blank" rel="noopener">View on GitHub <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Risky Business -->
+          <article class="card" data-tags="csharp unity">
+            <div class="card-media">
+              <video muted loop playsinline preload="none" poster="assets/img/risky-business.jpg" aria-label="Gameplay footage of Risky Business">
+                <source src="assets/video/risky-business.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body">
+              <h3>Risky Business</h3>
+              <p>
+                Co-developed in a team of 6, this competitive party game challenges players to out-rate rival stores through chaotic sabotage.
+                I implemented interactive prop throwing, player pushing, dynamic NPC handling and custom scoring systems.
+              </p>
+            </div>
+            <div class="card-footer">
+              <ul class="tags" aria-label="Technologies"><li>C#</li><li>Unity</li></ul>
+              <a class="card-link" href="https://araarathain.itch.io/gp01riskybusiness" target="_blank" rel="noopener">Play on itch.io <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Aero Golf -->
+          <article class="card" data-tags="csharp unity">
+            <div class="card-media">
+              <video muted loop playsinline preload="none" poster="assets/img/aero-golf.jpg" aria-label="Gameplay footage of Aero Golf">
+                <source src="assets/video/aero-golf.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body">
+              <h3>Aero Golf</h3>
+              <p>
+                My first full Unity project, built for a school exam.
+                I implemented click-and-drag movement, basic UI and level management while learning Unity's workspace and C# scripting,
+                resulting in a fully playable prototype.
+              </p>
+            </div>
+            <div class="card-footer">
+              <ul class="tags" aria-label="Technologies"><li>C#</li><li>Unity</li></ul>
+              <a class="card-link" href="https://warregeerts.itch.io/aero-golf" target="_blank" rel="noopener">Play on itch.io <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </article>
+
+          <!-- The Forgotten Crypt -->
+          <article class="card" data-tags="cpp">
+            <div class="card-media">
+              <img src="assets/img/forgotten-crypt.png" width="400" height="223" loading="lazy" alt="Screenshot of The Forgotten Crypt, a Doom-style raycast game">
+            </div>
+            <div class="card-body">
+              <h3>The Forgotten Crypt</h3>
+              <p>
+                My first group project, made with a friend: randomly generated maps built incrementally from a 2D array for each new level.
+                I implemented raycast-based rendering directly from the grid data to create a Doom-style first-person view.
+              </p>
+            </div>
+            <div class="card-footer">
+              <ul class="tags" aria-label="Technologies"><li>C++</li></ul>
+              <a class="card-link" href="https://warregeerts.itch.io/the-forgotten-crypt" target="_blank" rel="noopener">Play on itch.io <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container about-inner">
+        <h2 id="about-title" class="section-title">About</h2>
+        <div class="about-text">
+          <p>
+            I'm a third-year DAE Game Development student at Howest, passionate about game programming and building helpful tools.
+            I primarily work in C++, but I've also built projects with Unreal Engine Blueprints, Unity C#, custom SDL/OpenGL engines,
+            Lua (sol2) and AutoHotkey.
+          </p>
+          <p>
+            My favorite recent project is my Game AI research, where I studied Wave Function Collapse.
+            It was very interesting to see how the algorithm generates content based on constraints.
+          </p>
+          <div class="skills">
+            <h3>Skills</h3>
+            <ul class="tags tags-large">
+              <li>C++</li><li>C#</li><li>Unreal Engine</li><li>Unity</li><li>Lua</li><li>SDL / OpenGL</li><li>AutoHotkey</li>
+            </ul>
+            <h3>Languages</h3>
+            <ul class="tags tags-large"><li>Dutch</li><li>English</li></ul>
           </div>
         </div>
       </div>
-    </div>
-    <script
-      defer=""
-      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
-    ></script>
-  </body>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <p class="lead">I'm looking for an internship from February to June 2027. Feel free to get in touch!</p>
+        <ul class="contact-list">
+          <li>
+            <a class="contact-link" href="mailto:geertswarre@gmail.com?subject=Internship%20inquiry">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> geertswarre@gmail.com
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="https://www.linkedin.com/in/warre-geerts-93378038b/" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="https://github.com/WarreGeerts" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> GitHub
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="files/CV_WarreGeerts.pdf" download>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV (PDF)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Warre Geerts</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
