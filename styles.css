@@ -113,6 +113,7 @@ h1, h2, h3, p { margin: 0; }
 
 .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 32px; }
 .card {
+  position: relative; cursor: pointer;
   display: flex; flex-direction: column; background: var(--grey); border-radius: var(--radius); overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .1); transition: transform .2s, box-shadow .2s;
 }
@@ -132,6 +133,9 @@ h1, h2, h3, p { margin: 0; }
 .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 20px 18px; }
 .card-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--accent); text-decoration: none; border-bottom: 2px solid transparent; }
 .card-link:hover { border-bottom-color: currentColor; }
+.card-link::after { content: ""; position: absolute; inset: 0; }
+.card-link:focus-visible { outline: none; }
+.card-link:focus-visible::after { outline: 3px solid var(--accent-bright); outline-offset: -3px; border-radius: var(--radius); }
 
 .about { padding-block: 88px; }
 .about-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 40px 56px; align-items: start; }
